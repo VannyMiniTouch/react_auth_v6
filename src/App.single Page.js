@@ -10,8 +10,7 @@ import {
 const AuthContext = React.createContext(null);
 
 const Navigation = () => {
-  console.log("navigation");
-
+  
   const { token, onLogout } = useAuth();
 
   return (
@@ -30,7 +29,6 @@ const Navigation = () => {
 };
 
 const App = () => {
-  console.log("app");
   return (
     <AuthProvider>
       <h1>React Router</h1>
@@ -101,7 +99,6 @@ const Dashboard = () => {
   );
 };
 const AuthProvider = ({ children }) => {
-  console.log("auth");
   const navigate = useNavigate();
   const location = useLocation();
   const [token, setToken] = React.useState(null);
